@@ -1,10 +1,9 @@
-// --- Sky Shot Canvas Setup ---
+
 const canvas = document.getElementById("blastCanvas");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Fix for mobile screen rotation
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -74,7 +73,6 @@ function startInfiniteDiwali() {
     }, 800); 
 }
 
-// --- Login Logic ---
 async function checkLogin() {
     const user = document.getElementById("username").value;
     const passInput = document.getElementById("password");
@@ -90,7 +88,7 @@ async function checkLogin() {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/login", {
+        const response = await fetch("https://diwali-wishes-project-1.onrender.com/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username: user, password: pass })
