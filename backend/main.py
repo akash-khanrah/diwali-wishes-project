@@ -21,6 +21,6 @@ class LoginData(BaseModel):
 @app.post("/login")
 def login(data: LoginData):
     # Any name works, password MUST be 1234
-    if data.password == "1234":
+    if data.password == "AK1234":
         return {"success": True, "name": data.username.upper()}
     return {"success": False}
