@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Diwali 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Rye&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body id="main-body">
+    <canvas id="blastCanvas"></canvas>
+    <audio id="rocket-sound" src="https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3" preload="auto"></audio>
+    <audio id="boom-sound" src="https://assets.mixkit.co/active_storage/sfx/170/170-preview.mp3" preload="auto"></audio>
+    <audio id="bg-loop-sound" src="https://assets.mixkit.co/active_storage/sfx/2004/2004-preview.mp3" loop preload="auto"></audio>
+    <div id="login-container" class="login-box">
+        <h2 class="welcome-title">✨ WELCOME ✨</h2>
+        <div class="emoji-decor">🪔 🪔 🪔</div>
+        <input type="text" id="username" placeholder="Enter Your Name">
+        <input type="password" id="password" placeholder="Password (1234)">
+        <button onclick="checkLogin()">🧨 Login to Celebrate 🧨</button>
+    </div>
+    <div id="celebration-container" style="display: none;">
+        <div class="emoji-decor-large">✨ 🎇 ✨ 🎇 ✨</div>
+        <h1 class="happy-diwali">🎇 HAPPY DIWALI 2026 🎇</h1>
+        <h1 id="user-greeting" class="fire-name-style"></h1>
+        <div class="single-large-prodip">🪔</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #18002b, #3d0066, #0a0011); 
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background 1.5s ease-in-out;
+}
+
+.festive-bg {
+    background: radial-gradient(circle at bottom, #4a0010 0%, #1a0020 40%, #000000 100%) !important;
+}
+
+#blastCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.flash-screen {
+    animation: flashbang 1.5s ease-out forwards;
+}
+
+@keyframes flashbang {
+    0% { background-color: #ffffff; } 
+    20% { background-color: #ff3300; } 
+    100% { background-color: transparent; } 
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px 40px;
+    width: 90%;
+    max-width: 450px; 
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0,0,0,0.8), inset 0 0 20px rgba(255,255,255,0.05);
+    text-align: center;
+    backdrop-filter: blur(15px);
+    z-index: 10;
+}
+
+.welcome-title { 
+    color: #ffcc00; 
+    margin-bottom: 5px; 
+    font-size: 35px;
+    letter-spacing: 3px; 
+    text-shadow: 0 0 15px #ff9900;
+}
+
+.emoji-decor {
+    font-size: 30px;
+    margin-bottom: 25px;
+    animation: floatEmoji 2s infinite alternate;
+}
+
+@keyframes floatEmoji {
+    0% { transform: translateY(0px); filter: drop-shadow(0 0 10px #ffcc00); }
+    100% { transform: translateY(-10px); filter: drop-shadow(0 0 20px #ff6600); }
+}
+
+input { 
+    display: block; 
+    margin: 15px auto; 
+    padding: 15px; 
+    width: 100%; 
+    box-sizing: border-box;
+    border-radius: 10px; 
+    font-size: 16px; 
+    border: none; 
+    background: rgba(0,0,0,0.6); 
+    color: #fff; 
+    text-align: center; 
+    transition: 0.2s;
+}
+
+input:focus { outline: 2px solid #ffcc00; box-shadow: 0 0 15px #ffcc00; }
+
+button { 
+    margin-top: 20px; 
+    padding: 15px; 
+    width: 100%; 
+    box-sizing: border-box;
+    background: linear-gradient(45deg, #ff6600, #ff0055); 
+    color: #fff; 
+    border: none; 
+    border-radius: 30px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    box-shadow: 0 5px 15px rgba(255, 0, 85, 0.5);
+}
+
+button:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(255, 204, 0, 0.8); }
+
+#celebration-container {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    margin-top: -50px;
+    width: 95%;
+}
+
+.happy-diwali {
+    font-family: 'Rye', cursive;
+    font-size: 4.5rem;
+    color: #ffcc00;
+    text-shadow: 0 0 20px #ff9900, 0 0 40px #ff0000;
+    margin: 10px 0;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); text-shadow: 0 0 20px #ff9900; }
+    100% { transform: scale(1.05); text-shadow: 0 0 40px #ff3300; }
+}
+
+.fire-name-style {
+    font-family: 'Nosifer', cursive;
+    font-size: 6rem;
+    color: #ffaa00;
+    text-shadow: 0 -5px 10px #ff6600, 0 -15px 20px #ff0000, 0 -25px 30px #990000;
+    animation: fire-flicker 0.1s infinite alternate;
+    margin-top: 20px;
+}
+
+@keyframes fire-flicker {
+    0% { opacity: 0.9; text-shadow: 0 -5px 10px #ff6600, 0 -15px 20px #ff0000; }
+    100% { opacity: 1; text-shadow: 0 -10px 20px #ffcc00, 0 -20px 40px #ff0000, 0 -30px 50px #990000; }
+}
+
+.emoji-decor-large {
+    font-size: 40px;
+    margin: 15px 0;
+    animation: floatEmoji 1.5s infinite alternate;
+}
+
+.error-blink {
+    animation: shakeError 0.4s ease-in-out;
+    background: rgba(255, 0, 0, 0.2) !important;
+    border: 2px solid #ff0000 !important;
+    box-shadow: 0 0 15px #ff0000 !important;
+}
+
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+}
+
+.single-large-prodip {
+    font-size: 100px;
+    margin: 20px auto;
+    animation: diyaBlink 0.4s infinite alternate ease-in-out;
+}
+
+@keyframes diyaBlink {
+    0% { 
+        transform: scale(1); 
+        filter: drop-shadow(0 0 10px #ff6600) drop-shadow(0 0 20px #ff0000); 
+    }
+    100% { 
+        transform: scale(1.15); 
+        filter: drop-shadow(0 0 40px #ffcc00) drop-shadow(0 0 80px #ffff00) drop-shadow(0 0 100px #ff9900); 
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-title { font-size: 28px; }
+    .happy-diwali { font-size: 3rem; }
+    .fire-name-style { font-size: 4rem; margin-top: 15px; }
+    .emoji-decor-large { font-size: 30px; }
+    .single-large-prodip { font-size: 70px; }
+}
+@media (max-width: 480px) {
+    .login-box { padding: 30px 20px; }
+    .welcome-title { font-size: 24px; }
+    .emoji-decor { font-size: 24px; }
+    .happy-diwali { font-size: 2.2rem; }
+    .fire-name-style { font-size: 2.8rem; margin-top: 10px; }
+    button { font-size: 16px; padding: 12px; }
+    input { padding: 12px; }
+    .single-large-prodip { font-size: 60px; margin: 10px auto; }
+}
